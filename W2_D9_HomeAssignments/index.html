@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Assignments</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script> -->
+
+    
+
+</head>
+<body>
+    <center style="margin-top: 100px; font-size: x-large;">
+
+        <script>
+            // document.write("Hello")
+            // let tableOf ;
+            // let result ;
+
+
+            
+            function  table(tableOf){
+                document.write("<h1>Table of "+tableOf+"  </h1> ");
+                
+                for(let i=1;i<=10;i++){
+                    
+                    result = i*tableOf;
+                    document.write(i+" x "+tableOf+"  = "+result+"<br>");
+                    
+                }
+                
+                //   document.write("Hello World");
+                
+                
+            }
+
+            function oddEven (checkNum){
+
+                if(checkNum%2==0){
+
+                    document.write("<h1> The Given number is Even </h1>")
+                }
+                else{
+
+                    document.write("<h1> The Given number is Odd </h1>")
+
+                }
+
+            }
+            
+            let fact = 1 ;
+            function factorials(checkFac){
+
+                for(let i =1 ; i<=checkFac; i++){
+
+                    fact = i*fact;
+                
+                }
+                   document.write("Factorial of "+checkFac+" is "+fact);
+
+
+                
+            }
+
+            const  checkMini = [4,9,4,2,1,6,5];
+           
+            function minNum(){
+
+               document.write("<br/> Minimum number is "+Math.min(...checkMini));
+            //return mini;
+
+            }
+            const  checkMaxi = [4,9,4,2,1,6,5];
+            
+            function maxNum(){
+
+            document.write("<br/> Maximum number is "+Math.max(...checkMaxi));
+            //return mini;
+
+            }
+
+            table(4);
+            oddEven(7);
+            oddEven(8);
+
+            factorials(6);
+            minNum();
+            maxNum();
+            </script>
+            </center>
+    
+</body>
+</html>
