@@ -4,7 +4,7 @@ import Swal from 'sweetalert2/dist/sweetalert2.js'
 
 import './App.css'
 
-function App() {
+function StopWatch() {
 
   const [result,setResult] = useState(0);
   const [val_1,setVal_1] = useState(0);
@@ -30,22 +30,25 @@ function App() {
     
     const Id  = setInterval(() => {
       
-      setSec(sec => sec + 1);
-      if(sec=>(sec<=60)){
-        setMin(min =>min+1);
-
-      }
+      setSec((sec) => sec + 1);
+     
 
     }, 100);
 
+  
     
     setIntervalId(Id);
+    console.log(Id);
    
     
   }
+
   function stop() {
+   
+      console.log(intervalId);
     // setMin(min+1);
     clearInterval(intervalId);
+
    
     
   }
@@ -119,8 +122,7 @@ function App() {
 
            <div className='flex flex-row justify-center gap-2'>
 
-            <span className='bg-black text-white p-3 rounded font-bold'>Min : {min}</span>
-            <span className='bg-black text-white p-3 rounded font-bold'> Sec:{sec} </span>
+            <span className='bg-black text-white p-3 rounded font-bold'> Min:{Math.floor(sec/60)}   Sec:{sec%60}</span>
           
            </div>
           </div>
@@ -145,4 +147,4 @@ function App() {
   )
 }
 
-export default App
+export default StopWatch;
